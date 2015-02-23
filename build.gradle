@@ -17,7 +17,7 @@ version = "0.1.0"
 dependencies {
     compile  "org.embulk:embulk-core:0.4.6"
     provided "org.embulk:embulk-core:0.4.6"
-    // compile "YOUR_JAR_DEPENDENCY_GROUP:YOUR_JAR_DEPENDENCY_MODULE:YOUR_JAR_DEPENDENCY_VERSION"
+    compile  "org.apache.commons:commons-compress:1.9"
     testCompile "junit:junit:4.+"
 }
 
@@ -38,12 +38,12 @@ task gemspec << { file("build/gemspec").write($/
 Gem::Specification.new do |spec|
   spec.name          = "${project.name}"
   spec.version       = "${project.version}"
-  spec.authors       = ["YOUR_NAME"]
+  spec.authors       = ["Hiroyuki Sato"]
   spec.summary       = %[Apache Commons Compress decoder plugin for Embulk]
   spec.description   = %[Apache Commons Compress decoder plugin is an Embulk plugin that decodes files encoded by Apache Commons Compress read by any file input plugins. Search the file input plugins by 'embulk-input file' keywords.]
-  spec.email         = ["YOUR_NAME"]
+  spec.email         = ["hiroysato@gmail.com"]
   spec.licenses      = ["MIT"]
-  # TODO: spec.homepage      = "https://github.com/YOUR_NAME/embulk-decoder-apache-commons-compress"
+  spec.homepage      = "https://github.com/hiroyuki-sato/embulk-decoder-apache-commons-compress"
 
   spec.files         = `git ls-files`.split("\n") + Dir["classpath/*.jar"]
   spec.test_files    = spec.files.grep(%r"^(test|spec)/")
