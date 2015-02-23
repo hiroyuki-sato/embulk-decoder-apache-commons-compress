@@ -10,8 +10,7 @@ TODO: Write short description here
 
 ## Configuration
 
-- **property1**: description (string, required)
-- **property2**: description (integer, default: default-value)
+- **compression**: compression algorithm [bzip2/xz]. (string, required)
 
 ## Example
 
@@ -20,8 +19,7 @@ in:
   type: any output input plugin type
   decoders:
     - type: apache-commons-compress
-      property1: example1
-      property2: example2
+      compression: bzip2
 ```
 
 ## Build
